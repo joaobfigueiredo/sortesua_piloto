@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block page_content %}
+<div class="col-md-8 offset-md-2">
+<table class="table table-hover">
+  <thead>
+    <tr>
+	  <th scope="col">Ponto de venda</th>
+      <th scope="col">Contato</th>
+	  <th scope="col">Validação</th>
+      <th scope="col">Apostador</th>
+	  <th scope="col">Números</th>
+    </tr>
+  </thead>
+  <tbody>
+	{% for aposta in apostas %}
+	<tr>
+      <td>{{ aposta.ponto_de_venda }}</td>
+      <td>{{ aposta.contato }}</td>
+      <td>{{ aposta.validacao }}</td>
+      <td>{{ aposta.apostador }}</td>
+      <td>{{ aposta.numeros }}</td>
+    </tr>
+	{% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}
